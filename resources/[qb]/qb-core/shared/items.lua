@@ -306,7 +306,14 @@ QBShared.Items = {
     ['ausb2']                       = {['name'] = 'ausb2',                        ['label'] = 'Alias USB',                     ['weight'] = 3000,         ['type'] = 'item',         ['image'] = 'ausb.png',                 ['unique'] = true,         ['useable'] = true,     ['shouldClose'] = true,   ['combinable'] = nil,   ['description'] = 'Be whoever you want to be...', ["created"] = nil, ["decay"] = 28.0, ["delete"] = true },
     ['racingusb2']                       = {['name'] = 'racingusb2',                        ['label'] = 'Racing Dongle',                     ['weight'] = 3000,         ['type'] = 'item',         ['image'] = 'racingusb2.png',                 ['unique'] = true,         ['useable'] = false,     ['shouldClose'] = true,   ['combinable'] = nil,   ['description'] = 'To be seized - Illegal Item!', ["created"] = nil, ["decay"] = 28.0, ["delete"] = true },
     
-    
+    --PDBadge
+    -- Ivan's Better Police Badge
+	["police_badge"] 		 	 	 	 = {["name"] = "police_badge",           			["label"] = "Law Enforcement Badge",	 			["weight"] = 1000, 		["type"] = "item", 		["image"] = "police_badge.png", 			["unique"] = true, 	["useable"] = true, 	["shouldClose"] = true,   ["combinable"] = false,   ["description"] = "A police badge.", ["created"] = nil, ["decay"] = 28.0, ["delete"] = true },
+    ['bodycam'] 					 = {['name'] = 'bodycam', 					['label'] = 'Bodycam', 					['weight'] = 100, 		['type'] = 'item',		['image'] = 'bodycam.png', 			    ['unique'] = true, 	   ['useable'] = true, 	   ['shouldClose'] = true,	   ['combinable'] = nil,   ['description'] = 'Bodycam for Police Use', ["created"] = nil, ["decay"] = 28.0, ["delete"] = true },
+
+    --Rental Papers
+    ["rentalpapers"]				 = {["name"] = "rentalpapers", 					["label"] = "Rental Papers", 			["weight"] = 0, 		["type"] = "item", 		["image"] = "rentalpapers.png", 		["unique"] = true, 		["useable"] = false, 	["shouldClose"] = false, 	["combinable"] = nil, 	["description"] = "Yea, this is my car i can prove it!", ["created"] = nil, ["decay"] = 28.0, ["delete"] = true },
+
     -- QB-Vending
 	['cola'] 				 	     = {['name'] = 'cola', 			  	     		['label'] = 'eCola', 					['weight'] = 500, 		['type'] = 'item', 		['image'] = 'cola.png', 			    ['unique'] = false, 	['useable'] = true, 	['shouldClose'] = true,	   ['combinable'] = nil,   ['description'] = 'Genuine Cola', ["created"] = nil, ["decay"] = 28.0, ["delete"] = true },
 	['ecoladiet'] 				 	 = {['name'] = 'ecoladiet', 			  	    ['label'] = 'Diet eCola', 				['weight'] = 500, 		['type'] = 'item', 		['image'] = 'ecoladiet.png', 			['unique'] = false, 	['useable'] = true, 	['shouldClose'] = true,	   ['combinable'] = nil,   ['description'] = 'Genuine Diet Cola', ["created"] = nil, ["decay"] = 28.0, ["delete"] = true },
@@ -400,6 +407,23 @@ QBShared.Items = {
     ['harness']                         = {['name'] = 'harness',                           ['label'] = 'Race Harness',              ['weight'] = 1000,         ['type'] = 'item',         ['image'] = 'harness.png',                 ['unique'] = true,          ['useable'] = true,      ['shouldClose'] = true,      ['combinable'] = nil,   ['description'] = 'Racing Harness so no matter what you stay in the car' , ["created"] = nil, ["decay"] = 28.0, ["delete"] = true }, 
     ['jerry_can']                       = {['name'] = 'jerry_can',                         ['label'] = 'Jerrycan 20L',              ['weight'] = 20000,        ['type'] = 'item',         ['image'] = 'jerry_can.png',               ['unique'] = false,         ['useable'] = true,      ['shouldClose'] = true,      ['combinable'] = nil,   ['description'] = 'A can full of Fuel' , ["created"] = nil, ["decay"] = 28.0, ["delete"] = true }, 
 
+    --panicbutton
+    ['panicbutton']                     = {['name'] = 'panicbutton',                       ['label'] = 'Panic Button',              ['weight'] = 100,	       ['type']= 'item',          ['image'] = 'panicbutton.png',             ['unique'] = true,	         ['useable']= true,       ['shouldClose'] =true,       ['combinable'] = nil,   ['description'] = 'Some sort of button?', ["created"] = nil, ["decay"] = 28.0, ["delete"] = true }, 
+
+    --Megaphone item.
+    ["megaphone"]						= {["name"] = "megaphone",			["label"] = "Megaphone",		["weight"] = 20000,	["type"] = "item",	["image"] = "megaphone.png",	["unique"] = true,	["useable"] = true,	["shouldClose"] = false,	["combinable"] = nil,	   ["description"] = "A loudspeaker to yell at civilians.", ["created"] = nil, ["decay"] = 28.0, ["delete"] = true }, 
+
+    --StealSigns
+    ["stopsign"] = {["name"] = "stopsign", ["label"] = "Stop Sign", ["weight"] = 1, ["type"] = "item", ["image"] = "stopsign.png", ["unique"] = false, ["useable"] = true, ["shouldClose"] = true, ["combinable"] = nil, ["description"] = "Stop Sign", ["created"] = nil, ["decay"] = 28.0, ["delete"] = true },
+["walkingmansign"] = {["name"] = "walkingmansign", ["label"] = "Pedestrian Sign", ["weight"] = 1, ["type"] = "item", ["image"] = "walkingmansign.png", ["unique"] = false, ["useable"] = true, ["shouldClose"] = true, ["combinable"] = nil, ["description"] = "Pedestrian Sign", ["created"] = nil, ["decay"] = 28.0, ["delete"] = true },
+["dontblockintersectionsign"] = {["name"] = "dontblockintersectionsign", ["label"] = "Intersection Sign", ["weight"] = 1, ["type"] = "item", ["image"] = "dontblockintersectionsign.png", ["unique"] = false, ["useable"] = true, ["shouldClose"] = true, ["combinable"] = nil, ["description"] = "Intersection Sign", ["created"] = nil, ["decay"] = 28.0, ["delete"] = true },
+["uturnsign"] = {["name"] = "uturnsign", ["label"] = "U Turn Sign", ["weight"] = 1, ["type"] = "item", ["image"] = "uturnsign.png", ["unique"] = false, ["useable"] = true, ["shouldClose"] = true, ["combinable"] = nil, ["description"] = "U Turn Sign", ["created"] = nil, ["decay"] = 28.0, ["delete"] = true },
+["noparkingsign"] = {["name"] = "noparkingsign", ["label"] = "No Parking Sign", ["weight"] = 1, ["type"] = "item", ["image"] = "noparkingsign.png", ["unique"] = false, ["useable"] = true, ["shouldClose"] = true, ["combinable"] = nil, ["description"] = "No Parking Sign", ["created"] = nil, ["decay"] = 28.0, ["delete"] = true },
+["leftturnsign"] = {["name"] = "leftturnsign", ["label"] = "Left Turn Sign", ["weight"] = 1, ["type"] = "item", ["image"] = "leftturnsign.png", ["unique"] = false, ["useable"] = true, ["shouldClose"] = true, ["combinable"] = nil, ["description"] = "Left Turn Sign", ["created"] = nil, ["decay"] = 28.0, ["delete"] = true },
+["rightturnsign"] = {["name"] = "rightturnsign", ["label"] = "Right Turn Sign", ["weight"] = 1, ["type"] = "item", ["image"] = "rightturnsign.png", ["unique"] = false, ["useable"] = true, ["shouldClose"] = true, ["combinable"] = nil, ["description"] = "Right Turn Sign", ["created"] = nil, ["decay"] = 28.0, ["delete"] = true },
+["notrespassingsign"] = {["name"] = "notrespassingsign", ["label"] = "No Trespassing Sign", ["weight"] = 1, ["type"] = "item", ["image"] = "notrespassingsign.png", ["unique"] = false, ["useable"] = true, ["shouldClose"] = true, ["combinable"] = nil, ["description"] = "No Trespassing Sign", ["created"] = nil, ["decay"] = 28.0, ["delete"] = true },
+["yieldsign"] = {["name"] = "yieldsign", ["label"] = "Yield Sign", ["weight"] = 1, ["type"] = "item", ["image"] = "yieldsign.png", ["unique"] = false, ["useable"] = true, ["shouldClose"] = true, ["combinable"] = nil, ["description"] = "Yield Sign", ["created"] = nil, ["decay"] = 28.0, ["delete"] = true },
+
 
     --cdw-fuel 
     ["syphoningkit"]				 = {["name"] = "syphoningkit", 					["label"] = "Syphoning Kit", 			["weight"] = 5000, 		["type"] = "item", 		["image"] = "syphoningkit.png", 		["unique"] = true, 		["useable"] = true, 	["shouldClose"] = false,   ["combinable"] = nil,   ["description"] = "A kit made to siphon gasoline from vehicles.", ["created"] = nil, ["decay"] = 28.0, ["delete"] = true }, 
@@ -472,4 +496,313 @@ QBShared.Items = {
     ['newscam']                         = {['name'] = 'newscam',                           ['label'] = 'News Camera',               ['weight'] = 100,          ['type'] = 'item',         ['image'] = 'newscam.png',                 ['unique'] = true,          ['useable'] = true,      ['shouldClose'] = true,      ['combinable'] = nil,   ['description'] = 'A camera for the news' , ["created"] = nil, ["decay"] = 28.0, ["delete"] = true }, 
     ['newsmic']                         = {['name'] = 'newsmic',                           ['label'] = 'News Microphone',           ['weight'] = 100,          ['type'] = 'item',         ['image'] = 'newsmic.png',                 ['unique'] = true,          ['useable'] = true,      ['shouldClose'] = true,      ['combinable'] = nil,   ['description'] = 'A microphone for the news' , ["created"] = nil, ["decay"] = 28.0, ["delete"] = true }, 
     ['newsbmic']                        = {['name'] = 'newsbmic',                          ['label'] = 'Boom Microphone',           ['weight'] = 100,          ['type'] = 'item',         ['image'] = 'newsbmic.png',                ['unique'] = true,          ['useable'] = true,      ['shouldClose'] = true,      ['combinable'] = nil,   ['description'] = 'A Useable BoomMic' , ["created"] = nil, ["decay"] = 28.0, ["delete"] = true }, 
+
+--Hunting
+    ["meatdeer"] 		 			 	 = {["name"] = "meatdeer",       	    		["label"] = "Deer Horns",	 				["weight"] = 100, 		   ["type"] = "item", 		["image"] = "deerhorns.png", 			["unique"] = false, 	["useable"] = false, 	["shouldClose"] = false,   ["combinable"] = nil,   ["description"] = "Deer Horns",     ["created"] = nil, ["decay"] = 28.0, ["delete"] = true },
+    ["meatpig"] 		 			 	 = {["name"] = "meatpig",       	    		["label"] = "Pig Meat",	 					["weight"] = 100, 		   ["type"] = "item", 		["image"] = "pigpelt.png", 				["unique"] = false, 	["useable"] = false, 	["shouldClose"] = false,   ["combinable"] = nil,   ["description"] = "Pig Meat",       ["created"] = nil, ["decay"] = 28.0, ["delete"] = true },
+    ["meatboar"] 		 			 	 = {["name"] = "meatboar",       	    		["label"] = "Boar Tusks",	 				["weight"] = 100, 		   ["type"] = "item", 		["image"] = "boartusks.png", 			["unique"] = false, 	["useable"] = false, 	["shouldClose"] = false,   ["combinable"] = nil,   ["description"] = "Boar Tusks",     ["created"] = nil, ["decay"] = 28.0, ["delete"] = true },
+    ["meatlion"] 		 			 	 = {["name"] = "meatlion",       	    		["label"] = "Cougar Claws",	 				["weight"] = 100, 		   ["type"] = "item", 		["image"] = "cougarclaw.png", 			["unique"] = false, 	["useable"] = false, 	["shouldClose"] = false,   ["combinable"] = nil,   ["description"] = "Cougar Claw",    ["created"] = nil, ["decay"] = 28.0, ["delete"] = true },
+    ["meatcow"] 		 			 	 = {["name"] = "meatcow",       	    		["label"] = "Cow Pelt",	 					["weight"] = 100, 		["type"] = "item", 		["image"] = "cowpelt.png", 				["unique"] = false, 	["useable"] = false, 	["shouldClose"] = false,   ["combinable"] = nil,   ["description"] = "Cow Pelt",       ["created"] = nil, ["decay"] = 28.0, ["delete"] = true },
+    ["meatrabbit"] 		 			 	 = {["name"] = "meatrabbit",       	    		["label"] = "Rabbit Fur",	 				["weight"] = 100, 		["type"] = "item", 		["image"] = "rabbitfur.png", 			["unique"] = false, 	["useable"] = false, 	["shouldClose"] = false,   ["combinable"] = nil,   ["description"] = "Rabbit Fur",     ["created"] = nil, ["decay"] = 28.0, ["delete"] = true },
+    ["meatbird"] 		 			 	 = {["name"] = "meatbird",       	    		["label"] = "Bird Feather",	 				["weight"] = 100, 		["type"] = "item", 		["image"] = "birdfeather.png", 			["unique"] = false, 	["useable"] = false, 	["shouldClose"] = false,   ["combinable"] = nil,   ["description"] = "Bird Feather",   ["created"] = nil, ["decay"] = 28.0, ["delete"] = true },
+    ["meatcoyote"] 		 			 	 = {["name"] = "meatcoyote",       	    		["label"] = "Coyote Pelt",	 				["weight"] = 100, 		["type"] = "item", 		["image"] = "coyotepelt.png", 			["unique"] = false, 	["useable"] = false, 	["shouldClose"] = false,   ["combinable"] = nil,   ["description"] = "Coyote Pelt",    ["created"] = nil, ["decay"] = 28.0, ["delete"] = true },
+    ["huntingbait"] 		 			 = {["name"] = "huntingbait",       	    	["label"] = "Hunting Bait",	 				["weight"] = 150, 		["type"] = "item", 		["image"] = "huntingbait.png", 			["unique"] = false, 	["useable"] = true, 	["shouldClose"] = true,    ["combinable"] = nil,   ["description"] = "Hunting Bait",   ["created"] = nil, ["decay"] = 28.0, ["delete"] = true },
+
+    -- ================ Keep-companion ================
+    ["keepcompanionhusky"] = {
+        ["name"] = "keepcompanionhusky",
+        ["label"] = "Husky",
+        ["weight"] = 500,
+        ["type"] = "item",
+        ["image"] = "A_C_Husky.png",
+        ["unique"] = true,
+        ["useable"] = true,
+        ["shouldClose"] = true,
+        ["combinable"] = nil,
+        ["description"] = "Husky is your royal companion!"
+    },
+    ["keepcompanionpoodle"] = {
+        ["name"] = "keepcompanionpoodle",
+        ["label"] = "Poodle",
+        ["weight"] = 500,
+        ["type"] = "item",
+        ["image"] = "A_C_Poodle.png",
+        ["unique"] = true,
+        ["useable"] = true,
+        ["shouldClose"] = true,
+        ["combinable"] = nil,
+        ["description"] = "Poodle is your royal companion!"
+    },
+    ["keepcompanionrottweiler"] = {
+        ["name"] = "keepcompanionrottweiler",
+        ["label"] = "Rottweiler",
+        ["weight"] = 500,
+        ["type"] = "item",
+        ["image"] = "A_Rottweiler.png",
+        ["unique"] = true,
+        ["useable"] = true,
+        ["shouldClose"] = true,
+        ["combinable"] = nil,
+        ["description"] = "Rottweiler is your royal companion!"
+    },
+    ["keepcompanionwesty"] = {
+        ["name"] = "keepcompanionwesty",
+        ["label"] = "Westy",
+        ["weight"] = 500,
+        ["type"] = "item",
+        ["image"] = "A_C_Westy.png",
+        ["unique"] = true,
+        ["useable"] = true,
+        ["shouldClose"] = true,
+        ["combinable"] = nil,
+        ["description"] = "Westy is your royal companion!"
+    },
+    ["keepcompanionmtlion"] = {
+        ["name"] = "keepcompanionmtlion",
+        ["label"] = "MtLion",
+        ["weight"] = 500,
+        ["type"] = "item",
+        ["image"] = "A_C_MtLion.png",
+        ["unique"] = true,
+        ["useable"] = true,
+        ["shouldClose"] = true,
+        ["combinable"] = nil,
+        ["description"] = "MtLion is your royal companion!"
+    },
+    ["keepcompanionmtlion2"] = {
+        ["name"] = "keepcompanionmtlion2",
+        ["label"] = "Panter",
+        ["weight"] = 500,
+        ["type"] = "item",
+        ["image"] = "A_C_MtLion.png",
+        ["unique"] = true,
+        ["useable"] = true,
+        ["shouldClose"] = true,
+        ["combinable"] = nil,
+        ["description"] = "Panter is your royal companion!"
+    },
+    ["keepcompanioncat"] = {
+        ["name"] = "keepcompanioncat",
+        ["label"] = "Cat",
+        ["weight"] = 500,
+        ["type"] = "item",
+        ["image"] = "A_C_Cat_01.png",
+        ["unique"] = true,
+        ["useable"] = true,
+        ["shouldClose"] = true,
+        ["combinable"] = nil,
+        ["description"] = "Cat is your royal companion!"
+    },
+    ["keepcompanionpug"] = {
+        ["name"] = "keepcompanionpug",
+        ["label"] = "Pug",
+        ["weight"] = 500,
+        ["type"] = "item",
+        ["image"] = "A_C_Pug.png",
+        ["unique"] = true,
+        ["useable"] = true,
+        ["shouldClose"] = true,
+        ["combinable"] = nil,
+        ["description"] = "Pug is your royal companion!"
+    },
+    ["keepcompanionretriever"] = {
+        ["name"] = "keepcompanionretriever",
+        ["label"] = "Retriever",
+        ["weight"] = 500,
+        ["type"] = "item",
+        ["image"] = "A_C_Retriever.png",
+        ["unique"] = true,
+        ["useable"] = true,
+        ["shouldClose"] = true,
+        ["combinable"] = nil,
+        ["description"] = "Retriever is your royal companion!"
+    },
+    ["keepcompanionshepherd"] = {
+        ["name"] = "keepcompanionshepherd",
+        ["label"] = "Shepherd",
+        ["weight"] = 500,
+        ["type"] = "item",
+        ["image"] = "A_C_shepherd.png",
+        ["unique"] = true,
+        ["useable"] = true,
+        ["shouldClose"] = true,
+        ["combinable"] = nil,
+        ["description"] = "Shepherd is your royal companion!"
+    },
+    -- new pets
+    ["keepcompanioncoyote"]     = {
+		["name"] = "keepcompanioncoyote",
+		["label"] = "Coyote",
+		["weight"] = 500,
+		["type"] = "item",
+		["image"] = "A_C_Coyote.png",
+		["unique"] = true,
+		["useable"] = true,
+		["shouldClose"] = true,
+		["combinable"] = nil,
+		["description"] = "Coyote is your royal companion!"
+	},
+	["keepcompanionrabbit"]     = {
+		["name"] = "keepcompanionrabbit",
+		["label"] = "Rabbit",
+		["weight"] = 500,
+		["type"] = "item",
+		["image"] = "A_C_Rabbit_01.png",
+		["unique"] = true,
+		["useable"] = true,
+		["shouldClose"] = true,
+		["combinable"] = nil,
+		["description"] = "Rabbit is your royal companion!"
+	},
+	["keepcompanionhen"]        = {
+		["name"] = "keepcompanionhen",
+		["label"] = "Hen",
+		["weight"] = 500,
+		["type"] = "item",
+		["image"] = "A_C_Hen.png",
+		["unique"] = true,
+		["useable"] = true,
+		["shouldClose"] = true,
+		["combinable"] = nil,
+		["description"] = "Hen is your royal companion!"
+	},
+    ["keepcompanionrat"] = {
+        ["name"] = "keepcompanionrat",
+        ["label"] = "Rat",
+        ["weight"] = 500,
+        ["type"] = "item",
+        ["image"] = "A_C_Rat.png",
+        ["unique"] = true,
+        ["useable"] = true,
+        ["shouldClose"] = true,
+        ["combinable"] = nil,
+        ["description"] = "Your royal companion!"
+    },
+    ---
+    ["petfood"] = {
+        ["name"] = "petfood",
+        ["label"] = "pet food",
+        ["weight"] = 500,
+        ["type"] = "item",
+        ["image"] = "petfood.png",
+        ["unique"] = false,
+        ["useable"] = true,
+        ["shouldClose"] = true,
+        ["combinable"] = nil,
+        ["description"] = "food for your companion!"
+    },
+    ["collarpet"] = {
+        ["name"] = "collarpet",
+        ["label"] = "Pet collar",
+        ["weight"] = 500,
+        ["type"] = "item",
+        ["image"] = "collarpet.png",
+        ["unique"] = false,
+        ["useable"] = true,
+        ["shouldClose"] = true,
+        ["combinable"] = true,
+        ["description"] = "Rename your pets!"
+    },
+    ["firstaidforpet"] = {
+        ["name"] = "firstaidforpet",
+        ["label"] = "First aid for pet",
+        ["weight"] = 500,
+        ["type"] = "item",
+        ["image"] = "firstaidforpet.png",
+        ["unique"] = false,
+        ["useable"] = true,
+        ["shouldClose"] = true,
+        ["combinable"] = nil,
+        ["description"] = "Revive your pet!"
+    },
+	["petnametag"]              = {
+		["name"] = "petnametag",
+		["label"] = "Name tag",
+		["weight"] = 500,
+		["type"] = "item",
+		["image"] = "petnametag.png",
+		["unique"] = false,
+		["useable"] = true,
+		["shouldClose"] = true,
+		["combinable"] = nil,
+		["description"] = "Rename your pet"
+	},
+    ["petwaterbottleportable"]  = {
+		["name"] = "petwaterbottleportable",
+		["label"] = "Portable water bottle", 
+		["weight"] = 1000,
+		["type"] = "item",
+		["image"] = "petwaterbottleportable.png",
+		["unique"] = true,
+		["useable"] = true,
+		["shouldClose"] = true,
+		["combinable"] = nil,
+		["description"] = "Flask to store water for your pets"
+	},
+    ["petgroomingkit"]  = {
+		["name"] = "petgroomingkit",
+		["label"] = "Pet Grooming Kit",
+		["weight"] = 1000,
+		["type"] = "item",
+		["image"] = "petgroomingkit.png",
+		["unique"] = true,
+		["useable"] = true,
+		["shouldClose"] = true,
+		["combinable"] = nil,
+		["description"] = "Pet Grooming Kit"
+	},
+
+    --ps-camera
+    ['camera'] 						 = {['name'] = 'camera', 			  	  		['label'] = 'Camera', 					['weight'] = 1000, 		['type'] = 'item', 		['image'] = 'camera.png', 				['unique'] = true, 	['useable'] = true, 	['shouldClose'] = true,   ['combinable'] = nil,   ['description'] = 'Camera to take pretty pictures.',   ["created"] = nil, ["decay"] = 28.0, ["delete"] = true },
+	['photo'] 				 		 = {['name'] = 'photo', 			  	  		['label'] = 'Saved Pic', 				['weight'] = 500, 		['type'] = 'item', 		['image'] = 'photo.png', 				['unique'] = true, 	['useable'] = true, 	['shouldClose'] = true,   ['combinable'] = nil,   ['description'] = 'Brand new picture saved!',   ["created"] = nil, ["decay"] = 28.0, ["delete"] = true },
+
+    --Lotto Ticket
+    ["lotto"] = { ["name"] = "lotto", ["label"] = "Lotto ticket",["weight"] = 10,["type"] = "item", ["image"] = "lotto.png",["unique"] = false, ["useable"] = true, ["shouldClose"] = true,  ["combinable"] = nil,  ["description"] = "Lucky Ticket",   ["created"] = nil, ["decay"] = 28.0, ["delete"] = true },
+
+    --Weed Script
+    ['weedplant_seedm'] 			 = {['name'] = 'weedplant_seedm', 			    ['label'] = 'Male Weed Seed', 			['weight'] = 0, 		['type'] = 'item', 		['image'] = 'weedplant_seed.png', 		['unique'] = false, 	['useable'] = false, 	['shouldClose'] = false,   ['combinable'] = nil,   ['description'] = 'Male Weed Seed',   ["created"] = nil, ["decay"] = 28.0, ["delete"] = true },
+['weedplant_seedf'] 			 = {['name'] = 'weedplant_seedf', 			    ['label'] = 'Female Weed Seed', 		['weight'] = 0, 		['type'] = 'item', 		['image'] = 'weedplant_seed.png', 		['unique'] = false, 	['useable'] = true, 	['shouldClose'] = true,	   ['combinable'] = nil,   ['description'] = 'Female Weed Seed',   ["created"] = nil, ["decay"] = 28.0, ["delete"] = true },
+['weedplant_branch'] 			 = {['name'] = 'weedplant_branch', 			    ['label'] = 'Weed Branch', 				['weight'] = 10000, 	['type'] = 'item', 		['image'] = 'weedplant_branch.png', 	['unique'] = true, 		['useable'] = false, 	['shouldClose'] = false,   ['combinable'] = nil,   ['description'] = 'Weed plant',   ["created"] = nil, ["decay"] = 28.0, ["delete"] = true },
+['weedplant_weed'] 		     	 = {['name'] = 'weedplant_weed', 			    ['label'] = 'Dried Weed', 				['weight'] = 100, 		['type'] = 'item', 		['image'] = 'weedplant_weed.png', 		['unique'] = false, 	['useable'] = false, 	['shouldClose'] = false,   ['combinable'] = nil,   ['description'] = 'Weed ready for packaging',   ["created"] = nil, ["decay"] = 28.0, ["delete"] = true },
+['weedplant_packedweed'] 		 = {['name'] = 'weedplant_packedweed', 			['label'] = 'Packed Weed', 				['weight'] = 100, 		['type'] = 'item', 		['image'] = 'weedplant_weed.png', 		['unique'] = true, 		['useable'] = false, 	['shouldClose'] = false,   ['combinable'] = nil,   ['description'] = 'Weed ready for sale',   ["created"] = nil, ["decay"] = 28.0, ["delete"] = true },
+['weedplant_package'] 			 = {['name'] = 'weedplant_package', 			['label'] = 'Suspicious Package', 		['weight'] = 10000, 	['type'] = 'item', 		['image'] = 'weedplant_package.png', 	['unique'] = true, 		['useable'] = false, 	['shouldClose'] = false,   ['combinable'] = nil,   ['description'] = 'Suspicious Package',   ["created"] = nil, ["decay"] = 28.0, ["delete"] = true },
+['plant_tub'] 			         = {['name'] = 'plant_tub', 			        ['label'] = 'Plant Tub', 		     	['weight'] = 1000, 		['type'] = 'item', 		['image'] = 'plant_tub.png', 		    ['unique'] = false, 	['useable'] = false, 	['shouldClose'] = false,   ['combinable'] = nil,   ['description'] = 'Pot for planting plants',   ["created"] = nil, ["decay"] = 28.0, ["delete"] = true },
+['empty_watering_can'] 			 = {['name'] = 'empty_watering_can', 			['label'] = 'Empty Watering Can', 		['weight'] = 500, 		['type'] = 'item', 		['image'] = 'watering_can.png', 	    ['unique'] = true, 	    ['useable'] = true, 	['shouldClose'] = true,	   ['combinable'] = nil,   ['description'] = 'Empty watering can',   ["created"] = nil, ["decay"] = 28.0, ["delete"] = true },
+['full_watering_can'] 			 = {['name'] = 'full_watering_can', 			['label'] = 'Full Watering Can', 		['weight'] = 1000, 		['type'] = 'item', 		['image'] = 'watering_can.png', 	    ['unique'] = true, 	    ['useable'] = false, 	['shouldClose'] = false,	   ['combinable'] = nil,   ['description'] = 'Watering can filled with water for watering plants',   ["created"] = nil, ["decay"] = 28.0, ["delete"] = true },
+["keya"]                         = {["name"] = "keya",                          ["label"] = "Labkey A",                 ["weight"] = 0,         ["type"] = "item",      ["image"] = "keya.png",                 ["unique"] = true,      ["useable"] = false,    ["shouldClose"] = false,   ["combinable"] = nil,   ["description"] = "Labkey A..",   ["created"] = nil, ["decay"] = 28.0, ["delete"] = true },
+
+    --AV Laptop + Dependant Scripts.
+    --AV Laptop
+    ['laptop'] =    {['name'] = 'laptop', ['label'] = 'Laptop', ['weight'] = 12000, ['type'] = 'item', ['image'] = 'laptop.png', ['unique'] = true, ['useable'] = true, 	['shouldClose'] = true, ['combinable'] = nil, ['description'] = 'Laptop',   ["created"] = nil, ["decay"] = 28.0, ["delete"] = true },
+    ['decrypter'] = {['name'] = 'decrypter', ['label'] = 'Decrypter', ['weight'] = 1000, ['type'] = 'item', ['image'] = 'decrypter.png', ['unique'] = false, ['useable'] = false, ['shouldClose'] = false, ['combinable'] = nil, ['description'] = 'Decrypter [TO BE SEIZED BY PD]',   ["created"] = nil, ["decay"] = 28.0, ["delete"] = true },
+    ['black_usb'] = {['name'] = 'black_usb', ['label'] = 'Black USB', ['weight'] = 1000, ['type'] = 'item', ['image'] = 'black_usb.png', ['unique'] = false, ['useable'] = false, ['shouldClose'] = false, ['combinable'] = nil, ['description'] = 'Whats this? [TO BE SEIZED BY PD]',   ["created"] = nil, ["decay"] = 28.0, ["delete"] = true },
+    
+    --AV Boosting
+    ['dongle'] = {['name'] = 'dongle', ['label'] = 'USB Dongle', ['weight'] = 1000, ['type'] = 'item', ['image'] = 'dongle.png', ['unique'] = true, ['useable'] = true, ['shouldClose'] = true, ['combinable'] = nil, ['description'] = 'Dingle Dongle [TO BE SEIZED BY PD]',   ["created"] = nil, ["decay"] = 28.0, ["delete"] = true },
+    ['vpn'] = {['name'] = 'vpn', ['label'] = 'VPN', ['weight'] = 1000, ['type'] = 'item', ['image'] = 'vpn.png', ['unique'] = false, ['useable'] = false, ['shouldClose'] = false, ['combinable'] = nil, ['description'] = 'VPN [TO BE SEIZED BY PD]',   ["created"] = nil, ["decay"] = 28.0, ["delete"] = true },
+    ['transponder'] = {['name'] = 'transponder', ['label'] = 'Transponder', ['weight'] = 2000, ['type'] = 'item', ['image'] = 'transponder.png', ['unique'] = false, ['useable'] = true, ['shouldClose'] = true, ['combinable'] = nil, ['description'] = '',   ["created"] = nil, ["decay"] = 28.0, ["delete"] = true },
+    ['hacking_device'] = {['name'] = 'hacking_device', ['label'] = 'Hacking Device', ['weight'] = 2000, ['type'] = 'item', ['image'] = 'hacking_device.png', ['unique'] = false, ['useable'] = true, ['shouldClose'] = true, ['combinable'] = nil, ['description'] = 'Hacking Device [TO BE SEIZED BY PD]',   ["created"] = nil, ["decay"] = 28.0, ["delete"] = true },
+
+    --AV Cameras
+    ['gopro'] = {['name'] = 'gopro', ['label'] = 'GoPro', ['weight'] = 2000, ['type'] = 'item', ['image'] = 'gopro.png', ['unique'] = true, ['useable'] = true, ['shouldClose'] = true, ['combinable'] = nil, ['description'] = 'GoPro Camera',   ["created"] = nil, ["decay"] = 28.0, ["delete"] = true },
+
+    --AV Gangs
+    ['spray'] = {['name'] = 'spray', ['label'] = 'Spray', ['weight'] = 2000, ['type'] = 'item', ['image'] = 'spray.png', ['unique'] = true, ['useable'] = true, 	['shouldClose'] = true, ['combinable'] = nil, ['description'] = 'SprayPaint',   ["created"] = nil, ["decay"] = 28.0, ["delete"] = true },
+    ['spray_remover'] = {['name'] = 'spray_remover', ['label'] = 'Spray Remover', ['weight'] = 5000, ['type'] = 'item', ['image'] = 'spray_remover.png', ['unique'] = true, ['useable'] = true, 	['shouldClose'] = true, ['combinable'] = nil, ['description'] = 'Spray Detergent',   ["created"] = nil, ["decay"] = 28.0, ["delete"] = true },
+
+    --AV Meth
+    ['meth_table'] = {['name'] = 'meth_table', ['label'] = 'Table', ['weight'] = 25000, ['type'] = 'item', ['image'] = 'meth_table.png', ['unique'] = true, ['useable'] = true, ['shouldClose'] = true, ['combinable'] = nil, ['description'] = 'Meth Table [TO BE SEIZED BY PD]',   ["created"] = nil, ["decay"] = 28.0, ["delete"] = true },
+    ['lab_key'] = {['name'] = 'lab_key', ['label'] = 'Key', ['weight'] = 2000, ['type'] = 'item', ['image'] = 'lab_key.png', ['unique'] = true, ['useable'] = true, ['shouldClose'] = true, ['combinable'] = nil, ['description'] = 'Meth Lab Key [TO BE SEIZED BY PD]',   ["created"] = nil, ["decay"] = 28.0, ["delete"] = true },
+    ['meth_batch'] = {['name'] = 'meth_batch', ['label'] = 'Meth Batch', ['weight'] = 2000, ['type'] = 'item', ['image'] = 'meth_batch.png', ['unique'] = true, ['useable'] = true, ['shouldClose'] = true, ['combinable'] = nil, ['description'] = 'Meth batch',   ["created"] = nil, ["decay"] = 28.0, ["delete"] = true },
+    ['ammonia'] = {['name'] = 'ammonia', ['label'] = 'Ammonia', ['weight'] = 1000, ['type'] = 'item', ['image'] = 'ammonia.png', ['unique'] = false, ['useable'] = false, ['shouldClose'] = false, ['combinable'] = nil, ['description'] = 'Amonia',   ["created"] = nil, ["decay"] = 28.0, ["delete"] = true },
+    ['meth_tray'] = {['name'] = 'meth_tray', ['label'] = 'Meth Tray', ['weight'] = 2000, ['type'] = 'item', ['image'] = 'meth_tray.png', ['unique'] = true, ['useable'] = false, ['shouldClose'] = false, ['combinable'] = nil, ['description'] = 'Meth Tray',   ["created"] = nil, ["decay"] = 28.0, ["delete"] = true },
+    ['baggies'] = {['name'] = 'baggies', ['label'] = 'Baggies', ['weight'] = 1000, ['type'] = 'item', ['image'] = 'baggies.png', ['unique'] = false, ['useable'] = false, ['shouldClose'] = false, ['combinable'] = nil, ['description'] = 'Baggies',   ["created"] = nil, ["decay"] = 28.0, ["delete"] = true },
+    ['meth1g'] = {['name'] = 'meth1g', ['label'] = 'Meth 1g', ['weight'] = 1000, ['type'] = 'item', ['image'] = 'meth1g.png', ['unique'] = false, ['useable'] = false, ['shouldClose'] = false, ['combinable'] = nil, ['description'] = 'Meth 1G',   ["created"] = nil, ["decay"] = 28.0, ["delete"] = true },
+
+    --AV Music
+    ['cd'] = {['name'] = 'cd', ['label'] = 'CD', ['weight'] = 1000, ['type'] = 'item', ['image'] = 'cd.png', ['unique'] = false, ['useable'] = true, ['shouldClose'] = true, ['combinable'] = nil, ['description'] = 'Support your local artist!',   ["created"] = nil, ["decay"] = 28.0, ["delete"] = true },
+
+    --AvResturaunts 
+    ['ingredients'] = {['name'] = 'ingredients', ['label'] = 'Ingredients', ['weight'] = 1000, ['type'] = 'item', ['image'] = 'ingredients.png', ['unique'] = false, ['useable'] = false, ['shouldClose'] = true, ['combinable'] = nil, ['description'] = 'Ingredients for food crafting',   ["created"] = nil, ["decay"] = 28.0, ["delete"] = true },
+
 }

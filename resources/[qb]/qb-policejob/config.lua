@@ -17,43 +17,44 @@ Config.LicenseRank = 2
 Config.UseTarget = GetConvar('UseTarget', 'false') == 'true'
 Config.Locations = {
     ["duty"] = {
-        [1] = vector3(440.085, -974.924, 30.689),
+        [1] = vector3(441.71, -982.02, 30.2),
         [2] = vector3(-449.811, 6012.909, 31.815),
     },
     ["vehicle"] = {
-        [1] = vector4(448.159, -1017.41, 28.562, 90.654),
-        [2] = vector4(471.13, -1024.05, 28.17, 274.5),
-        [3] = vector4(-455.39, 6002.02, 31.34, 87.93),
+        [1] = vector4(448.15, -1017.4, 22.96, 19.96),
+        [2] = vector4(448.15, -1017.4, 22.96, 19.96),
+        [3] = vector4(448.15, -1017.4, 22.96, 19.96),
     },
     ["stash"] = {
-        [1] = vector3(453.075, -980.124, 30.889),
+        [1] = vector3(461.76, -995.85, 29.79),
     },
     ["impound"] = {
-        [1] = vector3(436.68, -1007.42, 27.32),
-        [2] = vector3(-436.14, 5982.63, 31.34),
+        [1] = vector4(476.48, -1022.25, 28.06, 277.7), -- should be hidden now due to garage + radial
+        [2] = vector4(-436.14, 5982.63, 31.34, 136.0),
     },
     ["helicopter"] = {
         [1] = vector4(449.168, -981.325, 43.691, 87.234),
         [2] = vector4(-475.43, 5988.353, 31.716, 31.34),
     },
     ["armory"] = {
-        [1] = vector3(462.23, -981.12, 30.68),
+        [1] = vector3(482.55, -995.21, 29.89),
     },
     ["trash"] = {
-        [1] = vector3(439.0907, -976.746, 30.776),
+        [1] = vector3(446.88, -997.0, 29.79),
     },
     ["fingerprint"] = {
-        [1] = vector3(460.9667, -989.180, 24.92),
+        [1] = vector3(473.19, -1007.55, 26.27),
     },
     ["evidence"] = {
-        [1] = vector3(442.1722, -996.067, 30.689),
-        [2] = vector3(451.7031, -973.232, 30.689),
-        [3] = vector3(455.1456, -985.462, 30.689),
+        [1] = vector3(480.83, -991.82, 30.69), -- mrpd laboratory
+        [2] = vector3(475.38, -1005.11, 26.27), -- mrpd processing
+        [3] = vector3(474.91, -996.7, 26.27), -- evidence room
+        [4] = vector3(472.86, -996.48, 26.27), -- evidence room
     },
     ["stations"] = {
-        [1] = {label = "Police Station", coords = vector4(428.23, -984.28, 29.76, 3.5)},
+        [1] = {label = "Mission Row PD", coords = vector4(428.23, -984.28, 29.76, 3.5)},
         [2] = {label = "Prison", coords = vector4(1845.903, 2585.873, 45.672, 272.249)},
-        [3] = {label = "Police Station Paleto", coords = vector4(-451.55, 6014.25, 31.716, 223.81)},
+        [3] = {label = "Blaine County Sheriff Office", coords = vector4(-451.55, 6014.25, 31.716, 223.81)},
     },
 }
 
@@ -338,7 +339,7 @@ Config.Items = {
             },
             type = "weapon",
             slot = 11,
-            authorizedJobGrades = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14}
+            authorizedJobGrades = {0, 1, 2, 3, 4}
         },
         [12] = {
             name = "weapon_m4",
@@ -351,7 +352,7 @@ Config.Items = {
             },
             type = "weapon",
             slot = 12,
-            authorizedJobGrades = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14}
+            authorizedJobGrades = {0, 1, 2, 3, 4}
         },
         [13] = {
             name = "weapon_ar15",
@@ -366,7 +367,7 @@ Config.Items = {
             },
             type = "weapon",
             slot = 13,
-            authorizedJobGrades = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14}
+            authorizedJobGrades = {0, 1, 2, 3, 4}
         },
         [14] = {
             name = "weapon_remington",
@@ -379,7 +380,7 @@ Config.Items = {
             },
             type = "weapon",
             slot = 14,
-            authorizedJobGrades = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14}
+            authorizedJobGrades = {0, 1, 2, 3, 4}
         },
         [15] = {
             name = "weapon_scarh",
@@ -392,7 +393,7 @@ Config.Items = {
             },
             type = "weapon",
             slot = 15,
-            authorizedJobGrades = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14}
+            authorizedJobGrades = {0, 1, 2, 3, 4}
         },
         [16] = {
             name = "weapon_mk14",
@@ -405,7 +406,7 @@ Config.Items = {
             },
             type = "weapon",
             slot = 16,
-            authorizedJobGrades = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14}
+            authorizedJobGrades = {0, 1, 2, 3, 4}
         },
         [17] = {
             name = "handcuffs",
@@ -469,7 +470,34 @@ Config.Items = {
             type = "item",
             slot = 23,
             authorizedJobGrades = {0, 1, 2, 3, 4}
-        }
+        },
+        [24] = {
+            name = "panicbutton",
+            price = 0,
+            amount = 50,
+            info = {},
+            type = "item",
+            slot = 24,
+            authorizedJobGrades = {0, 1, 2, 3, 4}
+        },
+        [25] = {
+            name = "megaphone",
+            price = 0,
+            amount = 50,
+            info = {},
+            type = "item",
+            slot = 25,
+            authorizedJobGrades = {0, 1, 2, 3, 4}
+        },
+        [26] = {
+            name = "bodycam",
+            price = 0,
+            amount = 1,
+            info = {},
+            type = "item",
+            slot = 26,
+            authorizedJobGrades = {0, 1, 2, 3, 4}
+        },
     }
 }
 

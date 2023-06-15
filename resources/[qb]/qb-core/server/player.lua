@@ -123,7 +123,8 @@ function QBCore.Player.CheckPlayerData(source, PlayerData)
     PlayerData.metadata['licences'] = PlayerData.metadata['licences'] or {
         ['driver'] = true,
         ['business'] = false,
-        ['weapon'] = false
+        ['weapon'] = false,
+        ['pilot'] = false
     }
     PlayerData.metadata['inside'] = PlayerData.metadata['inside'] or {
         house = nil,
@@ -142,6 +143,12 @@ function QBCore.Player.CheckPlayerData(source, PlayerData)
         SerialNumber = QBCore.Player.CreateSerialNumber(),
         InstalledApps = {},
     }
+
+    --LJ-Laptop 
+    if not exports['qb-config']:isPaidEnabled("avScripts") then
+        PlayerData.metadata['laptop'] = PlayerData.metadata['laptop'] or {background = 'default',darkfont = false,}
+        PlayerData.metadata['carboostrep'] = PlayerData.metadata['carboostrep'] or 0
+    end
     -- Job
     if PlayerData.job and PlayerData.job.name and not QBCore.Shared.Jobs[PlayerData.job.name] then PlayerData.job = nil end
     PlayerData.job = PlayerData.job or {}

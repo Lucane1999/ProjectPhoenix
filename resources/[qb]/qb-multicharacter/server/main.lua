@@ -101,13 +101,13 @@ RegisterNetEvent('qb-multicharacter:server:createCharacter', function(data)
             loadHouseData(src)
             TriggerClientEvent("qb-multicharacter:client:closeNUI", src)
             TriggerClientEvent('apartments:client:setupSpawnUI', src, newData)
-            GiveStarterItems(src)
+            exports['um-idcard']:CreateMetaLicense(src, {'id_card','driver_license'})
         else
             print('^2[qb-core]^7 '..GetPlayerName(src)..' has succesfully loaded!')
             QBCore.Commands.Refresh(src)
             loadHouseData(src)
             TriggerClientEvent("qb-multicharacter:client:closeNUIdefault", src)
-            GiveStarterItems(src)
+            exports['um-idcard']:CreateMetaLicense(src, {'id_card','driver_license'})
         end
 	end
 end)
@@ -172,7 +172,7 @@ end)
 QBCore.Functions.CreateCallback("qb-multicharacter:server:getSkin", function(_, cb, cid)
     local result = MySQL.query.await('SELECT * FROM playerskins WHERE citizenid = ? AND active = ?', {cid, 1})
     if result[1] ~= nil then
-        cb(result[1].model, result[1].skin)
+        cb(json.decode(result[1].skin))
     else
         cb(nil)
     end

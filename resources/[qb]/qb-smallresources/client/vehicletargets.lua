@@ -16,10 +16,7 @@ exports['qb-target']:AddTargetBone(bones, {
             icon = "fas fa-chevron-circle-left",
             label = "Place In Vehicle",
             canInteract = function()
-                if insideShop then return false end
-                    QBCore.Functions.Notify("You cant do this in here.", "error")
-                    return true
-                end
+                return not insideShop 
             end,
         },
         {
@@ -28,10 +25,7 @@ exports['qb-target']:AddTargetBone(bones, {
             icon = "fas fa-chevron-circle-right",
             label = "Take Out Vehicle",
             canInteract = function()
-                if insideShop then return false end
-                    QBCore.Functions.Notify("You cant do this in here.", "error")
-                    return true
-                end
+                return not insideShop 
             end,
         }, 
         {
@@ -40,10 +34,7 @@ exports['qb-target']:AddTargetBone(bones, {
             icon = "fas fa-user-secret",
             label = "Get In Trunk",
             canInteract = function()
-                if insideShop then return false end
-                    QBCore.Functions.Notify("You cant do this in here.", "error")
-                    return true
-                end
+                return not insideShop 
             end,
         },
         {
@@ -52,10 +43,7 @@ exports['qb-target']:AddTargetBone(bones, {
             icon = "fas fa-car",
             label = "Flip Vehicle",
             canInteract = function()
-                if insideShop then return false end
-                    QBCore.Functions.Notify("You cant do this in here.", "error")
-                    return true
-                end
+                return not insideShop 
             end,
         },
         {
@@ -64,10 +52,7 @@ exports['qb-target']:AddTargetBone(bones, {
             icon = "fas fa-key", 
             label = "Give Keys",
             canInteract = function()
-                if insideShop then return false end
-                    QBCore.Functions.Notify("You cant do this in here.", "error")
-                    return true
-                end
+                return not insideShop 
             end,
         }, 
     },

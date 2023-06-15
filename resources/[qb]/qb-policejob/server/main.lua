@@ -120,7 +120,7 @@ QBCore.Commands.Add("grantlicense", Lang:t("commands.license_grant"), {{name = "
     local src = source
     local Player = QBCore.Functions.GetPlayer(src)
     if Player.PlayerData.job.name == "police" and Player.PlayerData.job.grade.level >= Config.LicenseRank then
-        if args[2] == "driver" or args[2] == "weapon" then
+        if args[2] == "driver" or args[2] == "weapon" or args[2] == "pilot" then
             local SearchedPlayer = QBCore.Functions.GetPlayer(tonumber(args[1]))
             if not SearchedPlayer then return end
             local licenseTable = SearchedPlayer.PlayerData.metadata["licences"]
@@ -144,7 +144,7 @@ QBCore.Commands.Add("revokelicense", Lang:t("commands.license_revoke"), {{name =
     local src = source
     local Player = QBCore.Functions.GetPlayer(src)
     if Player.PlayerData.job.name == "police" and Player.PlayerData.job.grade.level >= Config.LicenseRank then
-        if args[2] == "driver" or args[2] == "weapon" then
+        if args[2] == "driver" or args[2] == "weapon" or args[2] == "pilot" then
             local SearchedPlayer = QBCore.Functions.GetPlayer(tonumber(args[1]))
             if not SearchedPlayer then return end
             local licenseTable = SearchedPlayer.PlayerData.metadata["licences"]
@@ -378,7 +378,7 @@ QBCore.Commands.Add("depot", Lang:t("commands.depot"), {{name = "price", help = 
     end
 end)
 
-QBCore.Commands.Add("impound", Lang:t("commands.impound"), {}, false, function(source)
+--[[ QBCore.Commands.Add("impound", Lang:t("commands.impound"), {}, false, function(source)
     local src = source
     local Player = QBCore.Functions.GetPlayer(src)
     if Player.PlayerData.job.name == "police" and Player.PlayerData.job.onduty then
@@ -386,7 +386,7 @@ QBCore.Commands.Add("impound", Lang:t("commands.impound"), {}, false, function(s
     else
         TriggerClientEvent('QBCore:Notify', src, Lang:t("error.on_duty_police_only"), 'error')
     end
-end)
+end) ]]
 
 QBCore.Commands.Add("paytow", Lang:t("commands.paytow"), {{name = "id", help = Lang:t('info.player_id')}}, true, function(source, args)
     local src = source
@@ -882,11 +882,6 @@ RegisterNetEvent('police:server:SetHandcuffStatus', function(isHandcuffed)
     end
 end)
 
-RegisterNetEvent('heli:spotlight', function(state)
-    local serverID = source
-    TriggerClientEvent('heli:spotlight', -1, serverID, state)
-end)
-
 -- RegisterNetEvent('police:server:FlaggedPlateTriggered', function(camId, plate, street1, street2, blipSettings)
 --     local src = source
 --     for k, v in pairs(QBCore.Functions.GetPlayers()) do
@@ -999,24 +994,6 @@ end)
 
 RegisterNetEvent('police:server:deleteObject', function(objectId)
     TriggerClientEvent('police:client:removeObject', -1, objectId)
-end)
-
-RegisterNetEvent('police:server:Impound', function(plate, fullImpound, price, body, engine, fuel)
-    local src = source
-    price = price and price or 0
-    if IsVehicleOwned(plate) then
-        if not fullImpound then
-            MySQL.query(
-                'UPDATE player_vehicles SET state = ?, depotprice = ?, body = ?, engine = ?, fuel = ? WHERE plate = ?',
-                {0, price, body, engine, fuel, plate})
-            TriggerClientEvent('QBCore:Notify', src, Lang:t("info.vehicle_taken_depot", {price = price}))
-        else
-            MySQL.query(
-                'UPDATE player_vehicles SET state = ?, body = ?, engine = ?, fuel = ? WHERE plate = ?',
-                {2, body, engine, fuel, plate})
-            TriggerClientEvent('QBCore:Notify', src, Lang:t("info.vehicle_seized"))
-        end
-    end
 end)
 
 RegisterNetEvent('evidence:server:UpdateStatus', function(data)
@@ -1189,4 +1166,87 @@ CreateThread(function()
         Wait(5000)
         UpdateBlips()
     end
+end)
+
+--Impound
+RegisterNetEvent('police:server:Impound', function(plate, fullImpound, price, body, engine, fuel)
+    local src = source
+    local price = price and price or 0
+    if IsVehicleOwned(plate) then
+        if not fullImpound then
+            MySQL.Async.execute(
+                'UPDATE player_vehicles SET state = ?, depotprice = ?, body = ?, engine = ?, fuel = ? WHERE plate = ?',
+                {0, price, body, engine, fuel, plate})
+            TriggerClientEvent('QBCore:Notify', src, Lang:t("info.vehicle_taken_depot", {price = price}))
+        else
+            MySQL.Async.execute(
+                'UPDATE player_vehicles SET state = ?, depotprice = ?, body = ?, engine = ?, fuel = ?, garage = ? WHERE plate = ?',
+                {2, price, body, engine, fuel, "Seized", plate})
+            TriggerClientEvent('QBCore:Notify', src, Lang:t("info.vehicle_seized"))
+        end
+    end
+end)
+
+-- FiveM Heli Cam by mraes, Version 1.3 (2017-06-12)
+-- Modified by rjross2013 (2017-06-23)
+-- Further modified by Loque (2017-08-15)
+
+RegisterServerEvent('heli:forward.spotlight')
+AddEventHandler('heli:forward.spotlight', function(state)
+	local serverID = source
+	TriggerClientEvent('heli:forward.spotlight', -1, serverID, state)
+end)
+
+RegisterServerEvent('heli:tracking.spotlight')
+AddEventHandler('heli:tracking.spotlight', function(target_netID, target_plate, targetposx, targetposy, targetposz)
+	local serverID = source
+	TriggerClientEvent('heli:Tspotlight', -1, serverID, target_netID, target_plate, targetposx, targetposy, targetposz)
+end)
+
+RegisterServerEvent('heli:tracking.spotlight.toggle')
+AddEventHandler('heli:tracking.spotlight.toggle', function()
+	local serverID = source
+	TriggerClientEvent('heli:Tspotlight.toggle', -1, serverID)
+end)
+
+RegisterServerEvent('heli:pause.tracking.spotlight')
+AddEventHandler('heli:pause.tracking.spotlight', function(pause_Tspotlight)
+	local serverID = source
+	TriggerClientEvent('heli:pause.Tspotlight', -1, serverID, pause_Tspotlight)
+end)
+
+RegisterServerEvent('heli:manual.spotlight')
+AddEventHandler('heli:manual.spotlight', function()
+	local serverID = source
+	TriggerClientEvent('heli:Mspotlight', -1, serverID)
+end)
+
+RegisterServerEvent('heli:manual.spotlight.toggle')
+AddEventHandler('heli:manual.spotlight.toggle', function()
+	local serverID = source
+	TriggerClientEvent('heli:Mspotlight.toggle', -1, serverID)
+end)
+
+RegisterServerEvent('heli:light.up')
+AddEventHandler('heli:light.up', function()
+	local serverID = source
+	TriggerClientEvent('heli:light.up', -1, serverID)
+end)
+
+RegisterServerEvent('heli:light.down')
+AddEventHandler('heli:light.down', function()
+	local serverID = source
+	TriggerClientEvent('heli:light.down', -1, serverID)
+end)
+
+RegisterServerEvent('heli:radius.up')
+AddEventHandler('heli:radius.up', function()
+	local serverID = source
+	TriggerClientEvent('heli:radius.up', -1, serverID)
+end)
+
+RegisterServerEvent('heli:radius.down')
+AddEventHandler('heli:radius.down', function()
+	local serverID = source
+	TriggerClientEvent('heli:radius.down', -1, serverID)
 end)

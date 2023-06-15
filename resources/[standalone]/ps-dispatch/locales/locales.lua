@@ -24,6 +24,7 @@ Locales = {
         ['service'] = "Service vehicle",
         ['military'] = "Military vehicle",
         ['truck'] = "Truck",
+        ['BoostingTheft'] = "Cracker Devied Used On Vehicle",
         -- DISPATCH MESSAGES
         ['vehicleshots'] = "Shots Fired from Vehicle",
         ['shooting'] = "Discharge of a firearm",
@@ -44,6 +45,8 @@ Locales = {
         ['vehicletheft'] = "Vehicle Theft", 
         ['officerdown'] = "Officer is down",
         ['emsdown'] = "EMS Down",
+        ['officerdown2'] = "Officer Needs Assistance",
+        ['emsdown2'] = "EMS Needs Assistance",
         ['artgalleryrobbery'] = "Art Gallery Robbery",
         ['humanerobbery'] = "Humane Labs Robbery",
         ['trainrobbery'] = "Train Robbery",

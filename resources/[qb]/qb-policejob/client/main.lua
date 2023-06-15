@@ -166,7 +166,7 @@ RegisterNetEvent('police:client:policeAlert', function(coords, text)
     SetBlipDisplay(blip2, 8)
     SetBlipAlpha(blip, transG)
     SetBlipAlpha(blip2, transG)
-    SetBlipScale(blip, 0.8)
+    SetBlipScale(blip, 0.6)
     SetBlipScale(blip2, 2.0)
     SetBlipAsShortRange(blip, false)
     SetBlipAsShortRange(blip2, false)
@@ -207,10 +207,19 @@ CreateThread(function()
         local blip = AddBlipForCoord(station.coords.x, station.coords.y, station.coords.z)
         SetBlipSprite(blip, 60)
         SetBlipAsShortRange(blip, true)
-        SetBlipScale(blip, 0.8)
+        SetBlipScale(blip, 0.6)
         SetBlipColour(blip, 29)
         BeginTextCommandSetBlipName("STRING")
         AddTextComponentString(station.label)
         EndTextCommandSetBlipName(blip)
     end
 end)
+
+function GetJobName(job)
+    if job == PlayerJob.name then
+        return true 
+    else 
+        return false
+    end
+end
+exports("GetJobName", GetJobName)
